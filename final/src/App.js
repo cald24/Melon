@@ -3,39 +3,48 @@ import React, { useState } from 'react';
 export default function App() {
 	const questions = [
 		{
-			questionText: 'What is the capital of France?',
+			questionText: 'What is the size of these Melons?',
 			answerOptions: [
-				{ answerText: 'New York', isCorrect: false },
-				{ answerText: 'London', isCorrect: false },
-				{ answerText: 'Paris', isCorrect: true },
-				{ answerText: 'Dublin', isCorrect: false },
+				{ answerText: 'Where art thou', isCorrect: 1 },
+				{ answerText: 'Kansas flat', isCorrect: 2 },
+				{ answerText: 'Eh', isCorrect: 4 },
+				{ answerText: 'Petite', isCorrect: 6},
+				{ answerText: 'Average You Say?', isCorrect: 7 },
+				{ answerText: 'Definitly some Melons', isCorrect: 6 },
+				{ answerText: 'MILF Level', isCorrect: 4 },
+				{ answerText: 'Suffocation is Possible', isCorrect: 4 },
+				{ answerText: 'Freakin Milkers', isCorrect: 3 }
 			],
 		},
 		{
-			questionText: 'Who is CEO of Tesla?',
+			questionText: 'Lets talk about Perkiness/Sag, what say you?',
 			answerOptions: [
-				{ answerText: 'Jeff Bezos', isCorrect: false },
-				{ answerText: 'Elon Musk', isCorrect: true },
-				{ answerText: 'Bill Gates', isCorrect: false },
-				{ answerText: 'Tony Stark', isCorrect: false },
+				{ answerText: 'Freakin Eifle Tower', isCorrect: 5 },
+				{ answerText: 'It must be below Zero Out', isCorrect: 7 },
+				{ answerText: 'Honestly Noice', isCorrect: 7 },
+				{ answerText: 'I can work with these', isCorrect: 5 },
+				{ answerText: 'Average You Say?', isCorrect: 4 },
+				{ answerText: 'Back issues may be there', isCorrect: 4 },
+				{ answerText: 'MILF Level', isCorrect: 5 },
+				{ answerText: 'Old Lady', isCorrect: 2 },
+				{ answerText: 'Basically an udder', isCorrect: 2 }
 			],
 		},
 		{
-			questionText: 'The iPhone was created by which company?',
+			questionText: 'Hows thee Nipples?',
 			answerOptions: [
-				{ answerText: 'Apple', isCorrect: true },
-				{ answerText: 'Intel', isCorrect: false },
-				{ answerText: 'Amazon', isCorrect: false },
-				{ answerText: 'Microsoft', isCorrect: false },
+				{ answerText: 'Dots', isCorrect: 1 },
+				{ answerText: 'Hairy', isCorrect: 0 },
+				{ answerText: 'Normal', isCorrect: 3 },
+				{ answerText: 'Pokey', isCorrect: 7 },
+				{ answerText: 'Honkers', isCorrect: 7 }
 			],
 		},
 		{
-			questionText: 'How many Harry Potter books are there?',
+			questionText: 'Natural or Not?',
 			answerOptions: [
-				{ answerText: '1', isCorrect: false },
-				{ answerText: '4', isCorrect: false },
-				{ answerText: '6', isCorrect: false },
-				{ answerText: '7', isCorrect: true },
+				{ answerText: 'Yee', isCorrect: 9 },
+				{ answerText: 'Nah', isCorrect: 2 },
 			],
 		},
 	];
@@ -46,7 +55,7 @@ export default function App() {
 
 	const handleAnswerOptionClick = (isCorrect) => {
 		if (isCorrect) {
-			setScore(score + 1);
+			setScore(score + isCorrect);
 		}
 
 		const nextQuestion = currentQuestion + 1;
@@ -60,7 +69,7 @@ export default function App() {
 		<div className='app'>
 			{showScore ? (
 				<div className='score-section'>
-					You scored {score} out of {questions.length}
+					You scored {score} out of {30}
 				</div>
 			) : (
 				<>

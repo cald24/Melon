@@ -12,7 +12,7 @@ body {
 }
 
 body {
-  background-color: #7cc6fe;
+  background-image: url("melon2.jpg");
   display: flex;
   justify-content: center;
   align-items: center;
